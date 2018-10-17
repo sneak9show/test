@@ -1,0 +1,5 @@
+INDEX VERSION 1.127+C:\Users\internousdev\Desktop\workspace\workspace-ogawa\test\.metadata\.plugins\org.eclipse.jdt.core
+2848869319.index
+3805208080.index
+3791465712.index
+969968605.index
