@@ -4,9 +4,18 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>名前を入れよう</title>
+<title>演習</title>
 </head>
 <body>
+<form  method="post" action="total-out.jsp">
+<input type="text" name="price">
+円 X
+<input type="text" name="count">
+個+送料
+<input type="text" name="delivery">
+円=
+<input type="submit" name="計算">
+</form>
 
 </body>
 </html>

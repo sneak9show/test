@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>greeting</title>
+<title>total-out</title>
 </head>
 <body>
 <%@page errorPage="total-error.jsp" %>
