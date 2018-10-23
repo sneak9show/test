@@ -47,19 +47,36 @@ public class MySQLServlet extends HttpServlet {
 			String sql ="SELECT * FROM test_table";
 			ResultSet rs = stmt.executeQuery(sql);
 
+			while(rs.next()){
+				int userId = rs.getInt("user_id");
+				String userName = rs.getString("user_name");
+				String userPassword = rs.getString("password");
+				out.println("<p>");
+				out.println("ユーザーID:"+userId+",ユーザー名:"+userName+",パスワード:"+userPassword);
+
+				out.println("</p>");
+			}
+
+
+			rs.close();
+			stmt.close();
+		}catch(ClassNotFoundException e){
+			out.println("ClassNotFoundException:"+e.getMessage());
+		}catch(SQLException e){
+			out.println("SQLException:"+e.getMessage());
+		}catch(Exception e){
+			out.println("Exception:"+e.getMessage());
+		}finally{
+			try{
+				if(conn !=null){
+					conn.close();
+				}
+			}catch(SQLException e){
+				out.println("SQLException:"+ e.getMessage());
+			}
 		}
 
-
-
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		out.println("</body>");
+		out.println("</html>");
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
-
 }

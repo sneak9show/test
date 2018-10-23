@@ -96,3 +96,6 @@
 127.0.0.1 - - [22/Oct/2018:17:01:03 +0900] "GET / HTTP/1.1" 404 1019
 0:0:0:0:0:0:0:1 - - [22/Oct/2018:17:01:03 +0900] "GET /HelloServlet/ HTTP/1.1" 200 744
 0:0:0:0:0:0:0:1 - - [22/Oct/2018:17:01:20 +0900] "GET /HelloServlet/TestServlet?TestServlet=ogawa&password=ogawa HTTP/1.1" 200 57
+127.0.0.1 - - [22/Oct/2018:17:02:35 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [22/Oct/2018:17:02:37 +0900] "GET /HelloServlet/ HTTP/1.1" 200 741
+0:0:0:0:0:0:0:1 - - [22/Oct/2018:17:02:47 +0900] "GET /HelloServlet/TestServlet?username=ogawa&password=ogawa HTTP/1.1" 200 58
