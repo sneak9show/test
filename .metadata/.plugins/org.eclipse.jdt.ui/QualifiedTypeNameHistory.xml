@@ -7,4 +7,5 @@
 <fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
 <fullyQualifiedTypeName name="com.internousdev.login.dto.loginDTO"/>
 <fullyQualifiedTypeName name="com.internousdev.login.dao.loginDAO"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
 </qualifiedTypeNameHistroy>
