@@ -69,3 +69,17 @@
 0:0:0:0:0:0:0:1 - - [25/Oct/2018:17:24:24 +0900] "GET /WebProj2/ HTTP/1.1" 200 567
 0:0:0:0:0:0:0:1 - - [25/Oct/2018:17:24:36 +0900] "GET /WebProj2/WelcomeAction HTTP/1.1" 200 846
 0:0:0:0:0:0:0:1 - - [25/Oct/2018:17:24:58 +0900] "POST /WebProj2/LoginAction.action HTTP/1.1" 200 9030
+127.0.0.1 - - [25/Oct/2018:17:28:17 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [25/Oct/2018:17:28:19 +0900] "GET /WebProj2/ HTTP/1.1" 200 567
+0:0:0:0:0:0:0:1 - - [25/Oct/2018:17:28:22 +0900] "GET /WebProj2/WelcomeAction HTTP/1.1" 200 846
+0:0:0:0:0:0:0:1 - - [25/Oct/2018:17:28:28 +0900] "POST /WebProj2/LoginAction.action HTTP/1.1" 200 207
+0:0:0:0:0:0:0:1 - - [25/Oct/2018:17:28:43 +0900] "POST /WebProj2/LoginAction.action HTTP/1.1" 200 207
+0:0:0:0:0:0:0:1 - - [25/Oct/2018:17:28:49 +0900] "GET /WebProj2/WelcomeAction HTTP/1.1" 200 846
+0:0:0:0:0:0:0:1 - - [25/Oct/2018:17:28:57 +0900] "POST /WebProj2/LoginAction.action HTTP/1.1" 200 146
+0:0:0:0:0:0:0:1 - - [25/Oct/2018:17:29:02 +0900] "POST /WebProj2/HelloStrutsAction.action HTTP/1.1" 200 192
+0:0:0:0:0:0:0:1 - - [25/Oct/2018:17:31:04 +0900] "GET /WebProj2/ HTTP/1.1" 200 698
+0:0:0:0:0:0:0:1 - - [25/Oct/2018:17:31:05 +0900] "POST /WebProj2/WelcomeAction.action HTTP/1.1" 200 846
+0:0:0:0:0:0:0:1 - - [25/Oct/2018:17:31:14 +0900] "POST /WebProj2/LoginAction.action HTTP/1.1" 200 146
+0:0:0:0:0:0:0:1 - - [25/Oct/2018:17:31:21 +0900] "POST /WebProj2/LoginAction.action HTTP/1.1" 200 207
+127.0.0.1 - - [25/Oct/2018:17:54:54 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [25/Oct/2018:17:54:55 +0900] "GET /WebProj2/ HTTP/1.1" 404 1037
