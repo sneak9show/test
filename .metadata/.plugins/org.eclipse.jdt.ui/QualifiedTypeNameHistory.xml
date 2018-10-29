@@ -9,4 +9,5 @@
 <fullyQualifiedTypeName name="com.internousdev.login.dao.loginDAO"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="com.internousdev.webproj3.dto.HelloStrutsDTO"/>
 </qualifiedTypeNameHistroy>
