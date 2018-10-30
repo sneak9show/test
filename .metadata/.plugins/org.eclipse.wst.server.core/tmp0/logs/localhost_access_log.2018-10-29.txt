@@ -41,3 +41,6 @@
 0:0:0:0:0:0:0:1 - - [29/Oct/2018:16:57:05 +0900] "GET /WebProj3/TestAction.action?username=oki&password=123 HTTP/1.1" 200 204
 0:0:0:0:0:0:0:1 - - [29/Oct/2018:16:57:15 +0900] "POST /WebProj3/TestAction.action HTTP/1.1" 200 204
 0:0:0:0:0:0:0:1 - - [29/Oct/2018:17:00:32 +0900] "POST /WebProj3/TestAction.action HTTP/1.1" 200 210
+0:0:0:0:0:0:0:1 - - [29/Oct/2018:17:51:50 +0900] "POST /WebProj3/HelloStrutsAction.action HTTP/1.1" 200 192
+0:0:0:0:0:0:0:1 - - [29/Oct/2018:17:51:53 +0900] "POST /WebProj3/WelcomeAction.action HTTP/1.1" 200 845
+0:0:0:0:0:0:0:1 - - [29/Oct/2018:17:52:03 +0900] "POST /WebProj3/LoginAction.action HTTP/1.1" 200 146

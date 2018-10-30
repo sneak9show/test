@@ -2,8 +2,8 @@ drop database if exists testdb;
 create database testdb;
 use testdb;
 
-cres\ate table users(
-user_id int primary key auto_incremant,
+create table users(
+user_id int primary key auto_increment,
 user_name varchar(255),
 password varchar(255));
 
