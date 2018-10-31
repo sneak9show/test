@@ -27,7 +27,7 @@ public class LoginDAO {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, username);
 			ps.setString(2, password);
-			ResultSet rs=ps.executeQuery();
+			ResultSet rs = ps.executeQuery();
 
 			while(rs.next()){
 				LoginDTO dto=new LoginDTO();
@@ -38,8 +38,8 @@ public class LoginDAO {
 
 			if(loginDTOList.size()<=0){
 				LoginDTO dto=new LoginDTO();
-				dto.setUsername(rs.getString("該当なし"));
-				dto.setPassword(rs.getString("該当なし"));
+				dto.setUsername("該当なし");
+				dto.setPassword("該当なし");
 				loginDTOList.add(dto);
 			}
 

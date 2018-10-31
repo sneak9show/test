@@ -1,9 +1,0 @@
-package com.internousdev.login.dao;
-import java.sql.Connection;
-import java.sql
-
-
-
-public class loginDAO {
-
-}
