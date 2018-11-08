@@ -71,8 +71,15 @@ table {
 		<div>
 			<h3>商品を購入するにはログインをお願いします。</h3>
 			<s:form action="LoginAction">
-				ログインID<s:textfield name="loginUserId" />
-				<s:password name="loginPassword" />
+			<tr>
+				<td><label>[ログインID]</label></td>
+				<td><s:textfield name="loginUserId" /></td>
+			</tr>
+
+			<tr>
+				<td><label>[パスワード]</label></td>
+				<td><s:password name="loginPassword" /></td>
+			</tr>
 				<s:submit value="ログイン" />
 			</s:form>
 			<br />

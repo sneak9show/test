@@ -16,7 +16,7 @@ public class BuyItemAction extends ActionSupport implements SessionAware{
 		result=SUCCESS;
 
 			/*== sessionの中のObject格納しているものはtoStringで一度文字に変換しないと取り出せない、
-			 * しかしIntStockなのでintにするためにInteger.parseIntで文字列を数字に変換している。 ==*/
+			 * intにするためにInteger.parseIntで文字列を数字に変換している。 ==*/
 		session.put("stock",stock);
 		int intStock=Integer.parseInt(session.get("stock").toString());
 		int intPrice=Integer.parseInt(session.get("buyItem_price").toString());
@@ -28,6 +28,9 @@ public class BuyItemAction extends ActionSupport implements SessionAware{
 
 			payment="現金払い";
 			session.put("pay",payment);
+		}else{
+			payment="クレジットカード";
+			session.put("pay", payment);
 		}
 		return result;
 	}

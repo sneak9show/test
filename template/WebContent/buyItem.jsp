@@ -95,8 +95,8 @@ table {
 					<tr>
 						<td><span>支払い方法</span></td>
 						<td><input type="radio" name="pay" value="1"
-							checked="checked">現金支払い <input type="radio" name="pay"
-							value="2">クレジットカード</td>
+							checked="checked">現金支払い
+							<input type="radio" name="pay" value="2">クレジットカード</td>
 					</tr>
 
 					<tr>

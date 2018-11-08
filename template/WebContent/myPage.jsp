@@ -102,13 +102,14 @@
 				<s:submit value="削除" method="delete"/>
 			</s:form>
 
-			<s:if test="session.message != null">
-				<h3><s:property value="session.message"/></h3>
-			</s:if>
+		</s:if>
+		<s:if test="session.message != null">
+			<h3><s:property value="session.message"/></h3>
+		</s:if>
 
 				<div>
 					<br>
-					<span>全画面に戻る場合は</span>
+					<span>前画面に戻る場合は</span>
 					<a href='<s:url action="HomeAction"/>'>ログアウト</a>
 					<span>をお願い致します。</span>
 				</div>

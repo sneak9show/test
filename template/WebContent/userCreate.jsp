@@ -27,6 +27,12 @@ body {
 
 table {
 	text-align: center;
+	margin: 0 auto;
+}
+
+/*=== ID LAYOUT ===*/
+#top {
+	width: 780px;
 	margin: 30px auto;
 	border: 1px solid #333;
 }
@@ -54,7 +60,8 @@ table {
 <body>
 
 	<div id="header">
-		<div id="pr"></div>
+		<div id="pr">
+		</div>
 	</div>
 
 	<div id="main">
@@ -67,31 +74,35 @@ table {
 				<s:property value="errorMessage" escape="false" />
 			</s:if>
 			<table>
-			<s:form action="UserCreateConfirmAction">
-				<tr>
-					<td><label>ログインID:</label></td>
-					<td><input type="text" name="loginUserId" value=""/></td>
-					<td><label>ログインPASS:</label>
-					<td><input type="text" name="loginPassword" value=""/></td>
-					<td><label>ユーザー名:</label></td>
-					<td><input type="text" name="userName" value=""/></td>
-				</tr>
-				<s:submit value="登録"/>
-			</s:form>
+				<s:form action="UserCreateConfirmAction">
+					<tr>
+						<td><label>ログインID:</label></td>
+						<td><input type="text" name="loginUserId" value="" /></td>
+					</tr>
+					<tr>
+						<td><label>ログインPASS:</label>
+						<td><input type="text" name="loginPassword" value="" /></td>
+					</tr>
+
+					<tr>
+						<td><label>ユーザー名:</label></td>
+						<td><input type="text" name="userName" value="" /></td>
+					</tr>
+					<s:submit value="登録" />
+				</s:form>
 			</table>
 
 			<div>
 				<span>前画面に戻る場合は</span>
 				<a href='<s:url action="HomeAction"/>'>こちら</a>
 			</div>
-
 		</div>
+	</div>
 		<div id="footer">
 			<div id="pr">
 			</div>
 		</div>
 
-	</div>
 
 </body>
 </html>

@@ -12,7 +12,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class MyPageAction extends ActionSupport implements SessionAware{
 
 	public Map<String,Object> session;
-	public String deleteFig;
+	public String deleteFlg;
 	private String result;
 	public String execute() throws SQLException{
 		MyPageDAO myPageDAO=new MyPageDAO();
@@ -46,9 +46,32 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 		String item_transaction_id=session.get("id").toString();
 		String user_master_id=session.get("login_user_id").toString();
 
-		int res=myPageDAO.buyItemHistoryDelete();
+		int res=myPageDAO.buyItemHistoryDelete(item_transaction_id,user_master_id);
 
+		if(res>0){
+			session.put("message", "商品情報を正しく削除しました。");
+		}else if(res == 0){
+			session.put("message", "商品情報の削除に失敗しました。");
+		}
 	}
+
+	public String getDeleteFlg() {
+		return deleteFlg;
+	}
+	public void setDeleteFlg(String deleteFlg) {
+		this.deleteFlg = deleteFlg;
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+	@Override
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+
+
 
 
 }
