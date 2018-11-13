@@ -83,20 +83,22 @@ table {
 
 					<tr>
 						<td><span>在庫</span></td>
-						<td><select name="stock">
+						<td>
+						<select name="stock">
 								<option value="1" selected="selected">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
 								<option value="4">4</option>
 								<option value="5">5</option>
-						</select></td>
+						</select>
+						</td>
 					</tr>
 
 					<tr>
 						<td><span>支払い方法</span></td>
 						<td><input type="radio" name="pay" value="1"
-							checked="checked">現金支払い
-							<input type="radio" name="pay" value="2">クレジットカード</td>
+							checked="checked">現金支払い <input type="radio" name="pay"
+							value="2">クレジットカード</td>
 					</tr>
 
 					<tr>

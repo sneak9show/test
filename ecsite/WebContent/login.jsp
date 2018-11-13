@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags"%>
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,9 +9,10 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<title>Home画面</title>
+<title>login画面</title>
 
 <style type="text/css">
+/* TAG LAYOUT */
 	body {
 		margin: 0;
 		padding: 0;
@@ -54,40 +55,51 @@
 		clear: both;
 	}
 
-	#text-center {
+	#text-link {
 		display: line-block;
 		text-align: center;
 	}
 	</style>
+
 </head>
 <body>
 	<div id="header">
-		<div id="pr"></div>
+		<div id="pr">
+		</div>
 	</div>
 
 	<div id="main">
 		<div id="top">
-			<p>Home</p>
+			<h2>Login</h2>
 		</div>
-
-		<div id="text-center">
-			<s:form action="HomeAction">
-				<s:submit value="商品購入" />
+		<div>
+			<h3>商品を購入するにはログインをお願いします。</h3>
+			<s:form action="LoginAction">
+			<tr>
+				<td><label>ユーザーID</label></td>
+				<td><s:textfield name="loginUserId"/></td>
+			</tr>
+			<tr>
+				<td><label>パスワード</label></td>
+				<td><s:password name="loginpassword"/></td>
+			</tr>
+				<s:submit value="ログイン" />
 			</s:form>
+			<br>
 
-			<s:if test="#session.id != null">
-				<p>
-					ログアウトする場合は
-					<a href='<s:url action="LogoutAction"/>'>こちら</a>
-				</p>
-			</s:if>
-
+		<div id="text-link">
+			<p>新規ユーザー登録は
+				<a href='<s:url action="UserCreateAction"/>'>こちら</a></p>
+			<p>Home画面へ戻る場合は
+				<a href='<s:url action="GoHomeAction"/>'>こちら</a></p>
 		</div>
+	</div>
 
 	</div>
 
 	<div id="footer">
-		<div id="pr"></div>
+		<div id="pr">
+		</div>
 	</div>
 
 </body>
