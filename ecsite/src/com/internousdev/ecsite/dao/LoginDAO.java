@@ -39,4 +39,12 @@ public class LoginDAO {
 		return loginDTO;
 	}
 
+	public LoginDTO getLoginDTO() {
+		return loginDTO;
+	}
+
+	public void setLoginDTO(LoginDTO loginDTO) {
+		this.loginDTO = loginDTO;
+	}
+
 }

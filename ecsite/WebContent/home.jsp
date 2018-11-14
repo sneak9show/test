@@ -67,7 +67,7 @@
 
 	<div id="main">
 		<div id="top">
-			<p>Home</p>
+			<h2>Home</h2>
 		</div>
 
 		<div id="text-center">

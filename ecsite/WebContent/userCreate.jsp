@@ -9,9 +9,10 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<title>login画面</title>
+<title>UserCreate画面</title>
 
 <style type="text/css">
+
 /* TAG LAYOUT */
 	body {
 		margin: 0;
@@ -54,11 +55,6 @@
 		background-color: black;
 		clear: both;
 	}
-
-	#text-link {
-		display: line-block;
-		text-align: center;
-	}
 	</style>
 
 </head>
@@ -70,31 +66,41 @@
 
 	<div id="main">
 		<div id="top">
-			<h2>Login</h2>
+			<h2>UserCreate</h2>
 		</div>
+
 		<div>
-			<h3>商品を購入するにはログインをお願いします。</h3>
-			<s:form action="LoginAction">
-			<tr>
-				<td><label>ユーザーID</label></td>
-				<td><s:textfield name="loginUserId"/></td>
-			</tr>
-			<tr>
-				<td><label>パスワード</label></td>
-				<td><s:password name="loginPassword"/></td>
-			</tr>
-				<s:submit value="ログイン" />
+			<s:if test="erroeMassage != ''">
+				<s:property value="errorMassage" escape="false" />
+			</s:if>
+
+			<table>
+			<s:form action="UserCreateConfirmAction">
+				<tr>
+					<td><label>ログインID:</label></td>
+					<td><input type="text" name="loginUserId" value="" /></td>
+				</tr>
+
+				<tr>
+					<td><label>ログインPASS:</label></td>
+					<td><input type="text" name="loginPassword" value="" /></td>
+				</tr>
+
+				<tr>
+					<td><label>ユーザー名:</label></td>
+					<td><input type="text" name="userName" value="" /></td>
+				</tr>
+
+				<s:submit value="登録" />
 			</s:form>
-			<br>
+			</table>
 
-		<div id="text-link">
-			<p>新規ユーザー登録は
-				<a href='<s:url action="UserCreateAction"/>'>こちら</a></p>
-			<p>Home画面へ戻る場合は
-				<a href='<s:url action="GoHomeAction"/>'>こちら</a></p>
+			<div>
+				<span>前画面に戻るには</span>
+				<a href='<s:url action="HomeAction" />'>こちら</a>
+			</div>
+
 		</div>
-	</div>
-
 	</div>
 
 	<div id="footer">
