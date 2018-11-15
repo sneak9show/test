@@ -16,7 +16,7 @@
 /* TAG LAYOUT */
 body {
 	margin: 0;
-	padding: 0; line-height1 .6;
+	padding: 0; line-height:1.6;
 	letter-spacing: 1px;
 	font-famiry: Verdana, Helvetica, sans-serif;
 	font-size: 12px;

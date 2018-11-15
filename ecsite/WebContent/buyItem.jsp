@@ -17,7 +17,7 @@
 	body {
 		margin: 0;
 		padding: 0;
-		line-height1.6;
+		line-height:1.6;
 		letter-spacing: 1px;
 		font-famiry: Verdana, Helvetica, sans-serif;
 		font-size: 12px;
@@ -59,14 +59,14 @@
 </head>
 <body>
 
-	<div id="hesder">
+	<div id="header">
 		<div id="pr">
 		</div>
 	</div>
 
 	<div id="main">
 		<div id="top">
-			<p>BuyItem</p>
+			<h2>BuyItem</h2>
 		</div>
 		<div>
 			<s:form action="BuyItemAction">
