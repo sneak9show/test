@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags"%>
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<title>Home画面</title>
+<title>Admin画面</title>
 
 <style type="text/css">
 	body {
@@ -54,45 +54,68 @@
 		clear: both;
 	}
 
-	#text-center {
+	#text_1{
+		margin-left:23%;
+		width:25%;
+		float:left;
 		display: line-block;
 		text-align: center;
+		border:1px solid black;
 	}
-	</style>
+
+	#text_2{
+		width:25%;
+		float:left;
+		margin-left:25px;
+		display: line-block;
+		text-align: center;
+		border:1px solid black;
+	}
+
+</style>
 </head>
 <body>
+
 	<div id="header">
-		<div id="pr"></div>
+		<div id="pr">
+		</div>
 	</div>
 
 	<div id="main">
 		<div id="top">
-			<h2>Home</h2>
+			<h2>管理者画面</h2>
 		</div>
 
-		<div id="text-center">
-			<s:form action="HomeAction">
-				<s:submit value="商品購入" />
+		<div id="text_1">
+			<div>
+				<h3>商品</h3>
+			</div>
+			<s:form action="ItemCreateAction">
+				<s:submit value="新規登録" />
 			</s:form>
 
-			<s:form action="AdminAction">
-				<s:submit value="管理者" />
+			<s:form action="">
+				<s:submit value="一覧" />
 			</s:form>
-
-			<s:if test="#session.id != null">
-				<p>
-					ログアウトする場合は
-					<a href='<s:url action="LogoutAction"/>'>こちら</a>
-				</p>
-			</s:if>
-
 		</div>
 
-	</div>
+		<div id="text_2">
+			<div>
+				<h3>ユーザー</h3>
+			</div>
+			<s:form action="UserCreateAction">
+				<s:submit value="新規登録" />
+			</s:form>
 
-	<div id="footer">
-		<div id="pr"></div>
-	</div>
+			<s:form action="">
+				<s:submit value="一覧" />
+			</s:form>
+		</div>
+		</div>
+
+		<div id="footer">
+			<div id="pr"></div>
+		</div>
 
 </body>
 </html>

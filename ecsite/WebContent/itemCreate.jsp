@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<title>UserCreate画面</title>
+<title>ItemCreate画面</title>
 
 <style type="text/css">
 
@@ -56,7 +56,6 @@ table {
 	clear: both;
 }
 </style>
-
 </head>
 <body>
 	<div id="header">
@@ -65,7 +64,7 @@ table {
 
 	<div id="main">
 		<div id="top">
-			<h2>UserCreate</h2>
+			<h2>ItemCreate</h2>
 		</div>
 
 		<div>
@@ -74,20 +73,20 @@ table {
 			</s:if>
 
 			<table>
-				<s:form action="UserCreateConfirmAction">
+				<s:form action="ItemCreateConfirmAction">
 					<tr>
-						<td><label>ログインID:</label></td>
-						<td><input type="text" name="loginUserId" value="" /></td>
+						<td><label>商品名:</label></td>
+						<td><input type="text" name="itemName" value="" /></td>
 					</tr>
 
 					<tr>
-						<td><label>ログインPASS:</label></td>
-						<td><input type="text" name="loginPassword" value="" /></td>
+						<td><label>商品価格:</label></td>
+						<td><input type="text" name="itemPrice" value="" /></td>
 					</tr>
 
 					<tr>
-						<td><label>ユーザー名:</label></td>
-						<td><input type="text" name="userName" value="" /></td>
+						<td><label>在庫数:</label></td>
+						<td><input type="text" name="itemStock" value="" /></td>
 					</tr>
 
 					<s:submit value="登録" />
@@ -95,7 +94,7 @@ table {
 			</table>
 
 			<div>
-				<span>ログイン画面に戻るには</span> <a href='<s:url action="HomeAction" />'>こちら</a>
+				<span>Home画面に戻るには</span> <a href='<s:url action="GoHomeAction" />'>こちら</a>
 			</div>
 
 		</div>

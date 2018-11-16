@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags"%>
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,15 +9,13 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<title>UserCreate画面</title>
+<title>ItemCreateConfirm画面</title>
 
 <style type="text/css">
-
 /* TAG LAYOUT */
 body {
 	margin: 0;
-	padding: 0;
-	line-height: 1.6;
+	padding: 0; line-height:1.6;
 	letter-spacing: 1px;
 	font-famiry: Verdana, Helvetica, sans-serif;
 	font-size: 12px;
@@ -34,7 +32,6 @@ table {
 	width: 780px;
 	margin: 30px auto;
 	border: 1px solid #333;
-	text-align: center;
 }
 
 #header {
@@ -56,48 +53,42 @@ table {
 	clear: both;
 }
 </style>
-
 </head>
 <body>
 	<div id="header">
-		<div id="pr"></div>
+		<div id="pr">
+		</div>
 	</div>
 
 	<div id="main">
 		<div id="top">
-			<h2>UserCreate</h2>
+			<h2>ItemCreateConfirm</h2>
 		</div>
 
 		<div>
-			<s:if test="erroeMassage != ''">
-				<s:property value="errorMassage" escape="false" />
-			</s:if>
-
+			<h3>登録する内容は以下で宜しいでしょうか？</h3>
 			<table>
-				<s:form action="UserCreateConfirmAction">
-					<tr>
-						<td><label>ログインID:</label></td>
-						<td><input type="text" name="loginUserId" value="" /></td>
+				<s:form action="ItemCreateCompleteAction">
+					<tr id="box">
+						<td><label>商品名:</label></td>
+						<td><s:property value="itemName" escape="false" /></td>
+					</tr>
+
+					<tr id="box">
+						<td><label>商品価格:</label></td>
+						<td><s:property value="itemPrice" escape="false" /><span>円</span></td>
+					</tr>
+
+					<tr id="box">
+						<td><label>在庫数:</label></td>
+						<td><s:property value="itemStock" /><span>個</span></td>
 					</tr>
 
 					<tr>
-						<td><label>ログインPASS:</label></td>
-						<td><input type="text" name="loginPassword" value="" /></td>
+						<td><s:submit value="完了"/></td>
 					</tr>
-
-					<tr>
-						<td><label>ユーザー名:</label></td>
-						<td><input type="text" name="userName" value="" /></td>
-					</tr>
-
-					<s:submit value="登録" />
 				</s:form>
 			</table>
-
-			<div>
-				<span>ログイン画面に戻るには</span> <a href='<s:url action="HomeAction" />'>こちら</a>
-			</div>
-
 		</div>
 	</div>
 

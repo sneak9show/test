@@ -9,8 +9,7 @@
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<title>UserCreateComplete画面</title>
-
+	<title>ItemCreateComplete画面</title>
 	<style type="text/css">
 	/* TAG LAYOUT */
 	body {
@@ -55,6 +54,7 @@
 		clear: both;
 	}
 	</style>
+
 </head>
 <body>
 	<div id="header">
@@ -64,14 +64,13 @@
 
 	<div id="main">
 		<div id="top">
-		<h2>UserCreateComplete</h2>
+			<h2>ItemCreateComplete</h2>
 		</div>
 
 		<div>
-			<h3>ユーザーの登録が完了致しました。</h3>
+			<h3>商品情報の登録が完了致しました。</h3>
 			<div>
-				<a href='<s:url action="HomeAction"/>'>ログインへ</a>
-				<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a></p>
+				<a href='<s:url action="AdminAction"/>'>管理者画面へ</a>
 			</div>
 		</div>
 	</div>
@@ -80,7 +79,6 @@
 		<div id="pr">
 		</div>
 	</div>
-
 
 </body>
 </html>
