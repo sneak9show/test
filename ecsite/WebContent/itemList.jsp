@@ -69,7 +69,7 @@
 
 	<div id="main">
 		<div id="top">
-			<h2>MyPage</h2>
+			<h2>ItemList</h2>
 		</div>
 		<div>
 			<s:if test="itemList == null">

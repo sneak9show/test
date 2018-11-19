@@ -94,7 +94,7 @@
 				<s:submit value="新規登録" />
 			</s:form>
 
-			<s:form action="">
+			<s:form action="ItemListAction">
 				<s:submit value="一覧" />
 			</s:form>
 		</div>
