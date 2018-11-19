@@ -80,6 +80,7 @@
 				<h3>登録されている商品情報は以下になります。</h3>
 				<table border="1">
 				<tr>
+					<th>商品ID</th>
 					<th>商品名</th>
 					<th>値段</th>
 					<th>在庫個数</th>
@@ -88,6 +89,7 @@
 
 				<s:iterator value="itemList">
 					<tr>
+						<td><s:property value="id"/></td>
 						<td><s:property value="itemName" /></td>
 						<td><s:property value="itemPrice" /><span>円</span></td>
 						<td><s:property value="itemStock" /><span>個</span></td>
@@ -96,9 +98,9 @@
 				</s:iterator>
 				</table>
 
-				<s:form action="Action">
+				<s:form action="ItemListDeleteConfirmAction">
 					<input type="hidden" name="deleteFlg" value="1">
-					<s:submit value="削除" method="delete"/>
+					<s:submit value="全件削除" method="delete"/>
 				</s:form>
 			</s:elseif>
 

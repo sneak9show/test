@@ -19,7 +19,6 @@
 	</action>
 
 
-
 		<!-- LoginAction -->
 	<action name="LoginAction" class="com.internousdev.ecsite.action.LoginAction" method="execute">
 		<result name="success">buyItem.jsp</result>
@@ -91,6 +90,28 @@
 		<!-- ItemListAction -->
 	<action name="ItemListAction" class="com.internousdev.ecsite.action.ItemListAction" method="execute">
 		<result name="success">itemList.jsp</result>
+	</action>
+
+		<!-- ItemListDeleteConfirmAction -->
+	<action name="ItemListDeleteConfirmAction" class="com.internousdev.ecsite.action.ItemListDeleteConfirmAction" method="execute">
+		<result name="success">itemListDeleteConfirm.jsp</result>
+	</action>
+
+		<!-- UserListDeleteCompleteAction -->
+
+		<!-- UserListAction -->
+	<action name="UserListAction" class="com.internousdev.ecsite.action.UserListAction" method="execute">
+		<result name="success">userList.jsp</result>
+	</action>
+
+		<!-- UserListDeleteConfirmAction -->
+	<action name="UserListDeleteConfirmAction" class="com.internousdev.ecsite.action.UserListDeleteConfirmAction" method="execute">
+		<result name="success">userListDeleteConfirm.jsp</result>
+	</action>
+
+		<!-- UserListDeleteCompleteAction -->
+	<action name="UserListDeleteCompleteAction" class="com.internousdev.ecsite.action.UserListDeleteCompleteAction" method="execute">
+		<result name="success">userListDeleteComplete.jsp</result>
 	</action>
 
 	</package>

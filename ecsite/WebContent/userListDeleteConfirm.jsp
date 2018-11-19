@@ -9,9 +9,10 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<title>Admin画面</title>
+<title>UserListConfirm画面</title>
 
-<style type="text/css">
+	<style type="text/css">
+	/* TAG LAYOUT */
 	body {
 		margin: 0;
 		padding: 0;
@@ -54,28 +55,13 @@
 		clear: both;
 	}
 
-	#text_1{
-		margin-left:23%;
-		width:25%;
-		float:left;
+	#text-exit {
 		display: line-block;
 		text-align: center;
-		border:1px solid black;
 	}
-
-	#text_2{
-		width:25%;
-		float:left;
-		margin-left:25px;
-		display: line-block;
-		text-align: center;
-		border:1px solid black;
-	}
-
-</style>
+	</style>
 </head>
 <body>
-
 	<div id="header">
 		<div id="pr">
 		</div>
@@ -83,38 +69,24 @@
 
 	<div id="main">
 		<div id="top">
-			<h2>管理者画面</h2>
+			<h2>UserListDeleteConfirm</h2>
 		</div>
-
-		<div id="text_1">
 			<div>
-				<h3>商品</h3>
+				<div>
+				<p>全てのユーザーを削除します。よろしいですか？</p>
+				</div>
+					<s:form action="UserListDeleteCompleteAction">
+						<s:submit value="完了"/>
+					</s:form>
+
+					<s:form action="UserListAction">
+						<s:submit value="キャンセル" />
+					</s:form>
 			</div>
-			<s:form action="ItemCreateAction">
-				<s:submit value="新規登録" />
-			</s:form>
 
-			<s:form action="ItemListAction">
-				<s:submit value="一覧" />
-			</s:form>
-		</div>
-
-		<div id="text_2">
-			<div>
-				<h3>ユーザー</h3>
+			<div id="text-exit">
+				<p>管理者画面へ戻る場合は<a href='<s:url action="AdminAction"/>'>こちら</a></p>
 			</div>
-			<s:form action="UserCreateAction">
-				<s:submit value="新規登録" />
-			</s:form>
-
-			<s:form action="UserListAction">
-				<s:submit value="一覧" />
-			</s:form>
-		</div>
-		</div>
-
-		<div id="footer">
-			<div id="pr"></div>
 		</div>
 
 </body>
