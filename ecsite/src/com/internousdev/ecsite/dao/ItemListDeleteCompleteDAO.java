@@ -6,13 +6,13 @@ import java.sql.SQLException;
 
 import com.internousdev.ecsite.util.DBConnector;
 
-public class UserListDeleteCompleteDAO {
+public class ItemListDeleteCompleteDAO {
 
-	private DBConnector dbConnector=new DBConnector();
-	private Connection connection=dbConnector.getConnection();
+	private DBConnector dbConnector =new DBConnector();
+	private Connection  connection = dbConnector.getConnection();
 
-	public int userListDelete() throws SQLException{
-		String sql="DELETE FROM login_user_transaction";
+	public int itemListDelete() throws SQLException{
+		String sql ="DELETE FROM item_info_transaction";
 
 		PreparedStatement preparedStatement;
 		int count=0;

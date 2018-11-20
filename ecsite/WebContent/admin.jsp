@@ -33,6 +33,7 @@
 		margin: 30px auto;
 		border: 1px solid #333;
 		text-align:center;
+
 	}
 
 	#header {
@@ -55,7 +56,7 @@
 	}
 
 	#text_1{
-		margin-left:23%;
+		margin-left:24%;
 		width:25%;
 		float:left;
 		display: line-block;

@@ -7,70 +7,62 @@ import java.util.Map;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.ecsite.dao.UserListDeleteCompleteDAO;
-import com.internousdev.ecsite.dto.ItemInfoDTO;
+import com.internousdev.ecsite.dto.UserInfoDTO;
 import com.opensymphony.xwork2.ActionSupport;
+
 
 public class UserListDeleteCompleteAction extends ActionSupport implements SessionAware{
 
 	public Map<String ,Object> session;
-	private UserListDeleteCompleteDAO userListDeleteCompleteDAO =new UserListDeleteCompleteDAO();
-	private ArrayList<ItemInfoDTO> itemList=new ArrayList<ItemInfoDTO>();
-	private String deleteFlg;
+	private ArrayList<UserInfoDTO> userList=new ArrayList<UserInfoDTO>();
 	private String message;
+	private String deleteFlg;
+	private String result;
 
 	public String execute() throws SQLException{
 
-	int res=userListDeleteCompleteDAO.userListDelete();
+		UserListDeleteCompleteDAO userListDeleteCompleteDAO=new UserListDeleteCompleteDAO();
+		int count=userListDeleteCompleteDAO.userListDelete();
 
-	if(res > 0){
-		userListDeleteCompleteDAO = null;
-		setMessage("ユーザー情報を全件削除致しました。");
-	}else if(res == 0){
-		setMessage("ユーザー情報の削除に失敗しました。");
-	}
-	String result="SUCCESS";
-	return result;
-}
-
-	public Map<String, Object> getSession() {
-		return session;
-	}
-	@Override
-	public void setSession(Map<String, Object> session) {
-		this.session = session;
-	}
-
-	public UserListDeleteCompleteDAO getUserListDeleteCompleteDAO() {
-		return userListDeleteCompleteDAO;
-	}
-
-	public void setUserListDeleteCompleteDAO(UserListDeleteCompleteDAO userListDeleteCompleteDAO) {
-		this.userListDeleteCompleteDAO = userListDeleteCompleteDAO;
-	}
-
-	public ArrayList<ItemInfoDTO> getItemList() {
-		return itemList;
-	}
-
-	public void setItemList(ArrayList<ItemInfoDTO> itemList) {
-		this.itemList = itemList;
-	}
-
-	public String getDeleteFlg() {
-		return deleteFlg;
-	}
-
-	public void setDeleteFlg(String deleteFlg) {
-		this.deleteFlg = deleteFlg;
-	}
-
-	public String getMessage() {
-		return message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
+		if(count > 0){
+			setMessage("全てのユーザー情報を正しく削除しました。");
+		}else if(count == 0){
+			setMessage("全てのユーザー情報の削除に失敗しました。");
+		}
+		result=SUCCESS;
+		return result;
 	}
 
 
+		public Map<String, Object> getSession() {
+			return session;
+		}
+		@Override
+		public void setSession(Map<String, Object> session) {
+			this.session = session;
+		}
+		public ArrayList<UserInfoDTO> getUserList() {
+			return userList;
+		}
+		public void setUserList(ArrayList<UserInfoDTO> userList) {
+			this.userList = userList;
+		}
+		public String getMessage() {
+			return message;
+		}
+		public void setMessage(String message) {
+			this.message = message;
+		}
+		public String getDeleteFlg() {
+			return deleteFlg;
+		}
+		public void setDeleteFlg(String deleteFlg) {
+			this.deleteFlg = deleteFlg;
+		}
+		public String getResult() {
+			return result;
+		}
+		public void setResult(String result) {
+			this.result = result;
+		}
 }

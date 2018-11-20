@@ -4,15 +4,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="Content-Style-Type" content="text/css" />
-	<meta http-equiv="Content-Script-Type" content="text/javascript" />
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<title>UserListDeleteComplete画面</title>
-	<style type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="Content-Style-Type" content="text/css"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="imagetoolbar" content="no"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
 
-	/* TAG LAYOUT */
+<title>商品一覧</title>
+<style type="text/css">
+
 	body {
 		margin: 0;
 		padding: 0;
@@ -34,6 +35,7 @@
 		margin: 30px auto;
 		border: 1px solid #333;
 		text-align:center;
+
 	}
 
 	#header {
@@ -44,7 +46,7 @@
 
 	#main {
 		width: 100%;
-		height: 500px;
+		height: 2000px;
 		text-align: center;
 	}
 
@@ -54,36 +56,37 @@
 		background-color: black;
 		clear: both;
 	}
-	#text-exit {
-		display: line-block;
-		text-align: center;
+	
+	#itemList{
+		
 	}
 
-	</style>
+</style>
 </head>
 <body>
-<div id="header">
+	<div id="header">
 		<div id="pr">
 		</div>
 	</div>
 	<div id="main">
 		<div id="top">
-			<h2>UserListDeleteComplete</h2>
+			<h2>商品一覧画面</h2>
 		</div>
-
-		<s:if test="message != null">
-			<h3><s:property value="message"/></h3>
+		
+		<s:if test="ItemInfoDtoList != null">
+		<div class="itemList">
+		<s:iterator value="">
+			<div class="itemBox">
+			</div>
+		</s:iterator>
+		</div>
 		</s:if>
 
-		<div id="text-exit">
-				<p>管理者画面へ戻る場合は<a href='<s:url action="AdminAction"/>'>こちら</a></p>
-		</div>
-
 	</div>
+	
 	<div id="footer">
 		<div id="pr">
 		</div>
 	</div>
-
 </body>
 </html>

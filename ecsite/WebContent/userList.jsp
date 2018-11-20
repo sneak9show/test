@@ -48,16 +48,16 @@
 		text-align: center;
 	}
 
+	#text-exit {
+		display: line-block;
+		text-align: center;
+	}
+
 	#footer {
 		width: 100%;
 		height: 80px;
 		background-color: black;
 		clear: both;
-	}
-
-	#text-exit {
-		display: line-block;
-		text-align: center;
 	}
 	</style>
 </head>
@@ -108,6 +108,10 @@
 				<p>管理者画面へ戻る場合は<a href='<s:url action="AdminAction"/>'>こちら</a></p>
 			</div>
 		</div>
+	</div>
+
+	<div id="footer">
+		<div id="pr"></div>
 	</div>
 
 </body>

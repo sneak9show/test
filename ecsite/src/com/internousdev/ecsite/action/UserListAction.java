@@ -15,13 +15,11 @@ import com.opensymphony.xwork2.ActionSupport;
 		public Map<String ,Object> session;
 		private UserListDAO userListDAO =new UserListDAO();
 		private ArrayList<UserInfoDTO> userList=new ArrayList<UserInfoDTO>();
-		private String deleteFlg;
-		private String message;
 
 		public String execute() throws SQLException{
-			if(deleteFlg == null){
+
 				userList = userListDAO.getUserList();
-			}
+
 			String result=SUCCESS;
 			return result;
 		}
@@ -45,20 +43,6 @@ import com.opensymphony.xwork2.ActionSupport;
 		}
 		public void setUserList(ArrayList<UserInfoDTO> userList) {
 			this.userList = userList;
-		}
-
-		public String getDeleteFlg() {
-			return deleteFlg;
-		}
-		public void setDeleteFlg(String deleteFlg) {
-			this.deleteFlg = deleteFlg;
-		}
-
-		public String getMessage() {
-			return message;
-		}
-		public void setMessage(String message) {
-			this.message = message;
 		}
 
 }

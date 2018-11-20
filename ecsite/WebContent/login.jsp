@@ -76,11 +76,11 @@
 			<h3>商品を購入するにはログインをお願いします。</h3>
 			<s:form action="LoginAction">
 			<tr>
-				<td><label>ユーザーID</label></td>
-				<td><s:textfield name="loginUserId"/></td>
+				<td><label>ユーザーID:</label></td>
+				<td><s:textfield name ="loginUserId"/></td>
 			</tr>
 			<tr>
-				<td><label>パスワード</label></td>
+				<td><label>パスワード:</label></td>
 				<td><s:password name="loginPassword"/></td>
 			</tr>
 				<s:submit value="ログイン" />
