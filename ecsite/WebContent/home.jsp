@@ -9,59 +9,39 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
+<link rel="stylesheet" href="./css/style.css">
 <title>Home画面</title>
 
-<style type="text/css">
-	body {
-		margin: 0;
-		padding: 0;
-		line-height:1.6;
-		letter-spacing: 1px;
-		font-famiry: Verdana, Helvetica, sans-serif;
-		font-size: 12px;
-		color: #333;
-		background: #fff;
-	}
 
-	table {
-		text-align: center;
-		margin: 0 auto;
-	}
-	/* ID LAYOUT */
-	#top {
-		width: 780px;
-		margin: 30px auto;
-		border: 1px solid #333;
-		text-align:center;
-	}
-
-	#header {
-		width: 100%;
-		height: 80px;
-		background-color: black;
-	}
-
-	#main {
-		width: 100%;
-		height: 500px;
-		text-align: center;
-	}
-
-	#footer {
-		width: 100%;
-		height: 80px;
-		background-color: black;
-		clear: both;
-	}
-
-	#text-center {
-		display: line-block;
-		text-align: center;
-	}
-	</style>
 </head>
 <body>
 	<div id="header">
+		<div id="logo-img"><a href='<s:url action="GoHomeAction"/>'><img src="./img/konozama.png"></a>
+
+			<ul>
+				<li>
+				<s:if test="#session.id == null">
+					<s:form action="LoginAction">
+						<s:submit value="ログイン" />
+					</s:form>
+				</s:if>
+				</li>
+
+				<li>
+					<s:if test="#session.id != null">
+						<s:form action="LogoutAction">
+							<s:submit value="ログアウト"/>
+						</s:form>
+					</s:if>
+				</li>
+
+				<li>
+					<s:form action="UserCreateAction">
+						<s:submit value="新規登録" />
+					</s:form>
+				</li>
+			</ul>
+			</div>
 		<div id="pr"></div>
 	</div>
 
@@ -75,9 +55,12 @@
 				<s:submit value="商品購入" />
 			</s:form>
 
-			<s:form action="AdminAction">
-				<s:submit value="管理者" />
-			</s:form>
+			<s:if test="#session.admin_flg != null">
+				<s:form action="AdminAction">
+					<s:submit value="管理者" />
+				</s:form>
+			</s:if>
+
 
 			<s:if test="#session.id != null">
 				<p>
@@ -86,11 +69,19 @@
 				</p>
 			</s:if>
 
+
+
+
+
+
 		</div>
 
 	</div>
 
 	<div id="footer">
+		<div id="text-center">
+
+		</div>
 		<div id="pr"></div>
 	</div>
 

@@ -95,7 +95,8 @@ table {
 			</table>
 
 			<div>
-				<span>ログイン画面に戻るには</span> <a href='<s:url action="HomeAction" />'>こちら</a>
+				<p>ログイン画面に戻るには <a href='<s:url action="HomeAction" />'>こちら</a></p>
+				<p>Home画面に戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a></p>
 			</div>
 
 		</div>

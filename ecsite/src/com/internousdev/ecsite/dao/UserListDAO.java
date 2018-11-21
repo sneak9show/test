@@ -17,7 +17,7 @@ public class UserListDAO {
 
 		ArrayList<UserInfoDTO>userInfoDTO =new ArrayList<UserInfoDTO>();
 
-		String sql="SELECT id,login_id,login_pass,user_name,insert_date FROM login_user_transaction";
+		String sql="SELECT id,login_id,login_pass,user_name,admin_flg,insert_date FROM login_user_transaction";
 
 		try{
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -29,6 +29,7 @@ public class UserListDAO {
 				dto.setLoginId(resultSet.getString("login_id"));
 				dto.setLoginPassword(resultSet.getString("login_pass"));
 				dto.setUserName(resultSet.getString("user_name"));
+				dto.setAdmin_flg(resultSet.getString("admin_flg"));
 				dto.setInsert_date(resultSet.getString("insert_date"));
 				userInfoDTO.add(dto);
 			}

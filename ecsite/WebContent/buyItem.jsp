@@ -31,6 +31,7 @@
 	}
 	/* ID LAYOUT */
 	#top {
+		clear:both;
 		width: 780px;
 		margin: 30px auto;
 		border: 1px solid #333;
@@ -42,8 +43,26 @@
 		height: 80px;
 		background-color: black;
 	}
+		#logo-img img{
+		folat:left;
+		width:200px;
+		height:80px;
+	}
+
+	#header ul{
+		float:right;
+		line-height:40px;
+	}
+	#header ul li{
+		float:left;
+		list-style:none;
+		color:white;
+		padding-right:10px;
+		font-size:15px;
+	}
 
 	#main {
+		clear:both;
 		width: 100%;
 		height: 500px;
 		text-align: center;
@@ -57,11 +76,36 @@
 	}
 	</style>
 </head>
-<body>
 
+<body>
 	<div id="header">
-		<div id="pr">
-		</div>
+		<div id="logo-img"><a href='<s:url action="GoHomeAction"/>'><img src="./img/konozama.png"></a>
+
+			<ul>
+				<li>
+				<s:if test="#session.id == null">
+					<s:form action="LoginAction">
+						<s:submit value="ログイン" />
+					</s:form>
+				</s:if>
+				</li>
+
+				<li>
+					<s:if test="#session.id != null">
+						<s:form action="LogoutAction">
+							<s:submit value="ログアウト"/>
+						</s:form>
+					</s:if>
+				</li>
+
+				<li>
+					<s:form action="UserCreateAction">
+						<s:submit value="新規登録" />
+					</s:form>
+				</li>
+			</ul>
+			</div>
+		<div id="pr"></div>
 	</div>
 
 	<div id="main">
@@ -108,7 +152,7 @@
 			</table>
 		</s:form>
 		<div>
-			<p>前画面に戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a></p>
+			<p>Home画面に戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a></p>
 			<p>マイページは<a href ='<s:url action="MyPageAction"/>'>こちら</a></p>
 		</div>
 	</div>

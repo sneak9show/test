@@ -19,6 +19,7 @@ public class ItemListAction extends ActionSupport implements SessionAware{
 	private String message;
 
 	public String execute() throws SQLException{
+
 		if(deleteFlg == null){
 			itemList = itemListDAO.getItemList();
 		}

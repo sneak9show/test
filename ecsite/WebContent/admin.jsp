@@ -55,7 +55,7 @@
 		clear: both;
 	}
 
-	#text_1{
+	#admin_box_1{
 		margin-left:24%;
 		width:25%;
 		float:left;
@@ -64,13 +64,20 @@
 		border:1px solid black;
 	}
 
-	#text_2{
+	#admin_box_2{
 		width:25%;
 		float:left;
 		margin-left:25px;
 		display: line-block;
 		text-align: center;
 		border:1px solid black;
+	}
+
+	#text-exit{
+		padding:30px;
+		margin:30px;
+		clear:both;
+		text-align:center;
 	}
 
 </style>
@@ -87,7 +94,7 @@
 			<h2>管理者画面</h2>
 		</div>
 
-		<div id="text_1">
+		<div id="admin_box_1">
 			<div>
 				<h3>商品</h3>
 			</div>
@@ -100,7 +107,7 @@
 			</s:form>
 		</div>
 
-		<div id="text_2">
+		<div id="admin_box_2">
 			<div>
 				<h3>ユーザー</h3>
 			</div>
@@ -112,6 +119,11 @@
 				<s:submit value="一覧" />
 			</s:form>
 		</div>
+
+		<div id="text-exit">
+			<p>Home画面に戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a></p>
+		</div>
+
 		</div>
 
 		<div id="footer">

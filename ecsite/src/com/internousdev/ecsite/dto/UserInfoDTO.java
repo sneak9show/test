@@ -7,7 +7,14 @@ public class UserInfoDTO {
 	private String userName;
 	private String insert_date;
 	private String id;
+	private String admin_flg;
 
+	public String getAdmin_flg() {
+		return admin_flg;
+	}
+	public void setAdmin_flg(String admin_flg) {
+		this.admin_flg = admin_flg;
+	}
 	public String getId() {
 		return id;
 	}
