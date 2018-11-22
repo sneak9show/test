@@ -4,14 +4,14 @@ public class LoginDTO {
 	private String loginId;
 	private String loginPassword;
 	private String userName;
+	private String adminFlg;
 	private boolean loginFlg=false;
-	private boolean admin_flg;
 
-	public boolean getAdmin_flg() {
-		return admin_flg;
+	public String getAdminFlg() {
+		return adminFlg;
 	}
-	public void setAdmin_flg(boolean admin_flg) {
-		this.admin_flg = admin_flg;
+	public void setAdmin_flg(String adminFlg) {
+		this.adminFlg = adminFlg;
 	}
 	public String getLoginId() {
 		return loginId;

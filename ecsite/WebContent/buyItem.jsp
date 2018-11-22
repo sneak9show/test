@@ -24,7 +24,6 @@
 		color: #333;
 		background: #fff;
 	}
-
 	table {
 		text-align: center;
 		margin: 0 auto;
@@ -37,7 +36,6 @@
 		border: 1px solid #333;
 		text-align:center;
 	}
-
 	#header {
 		width: 100%;
 		height: 80px;
@@ -48,7 +46,6 @@
 		width:200px;
 		height:80px;
 	}
-
 	#header ul{
 		float:right;
 		line-height:40px;
@@ -60,14 +57,12 @@
 		padding-right:10px;
 		font-size:15px;
 	}
-
 	#main {
 		clear:both;
 		width: 100%;
 		height: 500px;
 		text-align: center;
 	}
-
 	#footer {
 		width: 100%;
 		height: 80px;

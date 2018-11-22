@@ -1,5 +1,6 @@
 package com.internousdev.ecsite.action;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	private List<BuyItemDTO> list= new ArrayList<>();
 
 
-	public String execute(){
+	public String execute()throws SQLException{
 		result =ERROR;
 		loginDTO= loginDAO.getLoginUserInfo(loginUserId,loginPassword);
 		session.put("loginUser", loginDTO);
@@ -32,14 +33,16 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		if(((LoginDTO)session.get("loginUser")).getLoginFlg()){
 			result=SUCCESS;
 
+			list=buyItemDAO.getBuyItemInfoAll();
 			BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();
-//			session.put("list", list);
+			session.put("list", list);
 			session.put("login_user_id",loginDTO.getLoginId());
 			session.put("id",buyItemDTO.getId());
-//			session.put("buyItem", buyItemDTO);
+			session.put("buyItem", buyItemDTO);
 			session.put("buyItem_name",buyItemDTO.getItemName());
 			session.put("buyItem_price",buyItemDTO.getItemPrice());
-			session.put("admin_flg", loginDTO.getAdmin_flg());
+			session.put("admin_flg", loginDTO.getAdminFlg());
+
 			return result;
 
 		}

@@ -48,7 +48,6 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 	public String getPay() {
 		return pay;
 	}
-
 	public void setPay(String pay) {
 		this.pay = pay;
 	}
