@@ -9,67 +9,9 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
+<link rel="stylesheet" href="./css/style.css">
 <title>BuyItem画面</title>
 
-
-<style type="text/css">
-/* TAG LAYOUT */
-	body {
-		margin: 0;
-		padding: 0;
-		line-height:1.6;
-		letter-spacing: 1px;
-		font-famiry: Verdana, Helvetica, sans-serif;
-		font-size: 12px;
-		color: #333;
-		background: #fff;
-	}
-	table {
-		text-align: center;
-		margin: 0 auto;
-	}
-	/* ID LAYOUT */
-	#top {
-		clear:both;
-		width: 780px;
-		margin: 30px auto;
-		border: 1px solid #333;
-		text-align:center;
-	}
-	#header {
-		width: 100%;
-		height: 80px;
-		background-color: black;
-	}
-		#logo-img img{
-		folat:left;
-		width:200px;
-		height:80px;
-	}
-	#header ul{
-		float:right;
-		line-height:40px;
-	}
-	#header ul li{
-		float:left;
-		list-style:none;
-		color:white;
-		padding-right:10px;
-		font-size:15px;
-	}
-	#main {
-		clear:both;
-		width: 100%;
-		height: 500px;
-		text-align: center;
-	}
-	#footer {
-		width: 100%;
-		height: 80px;
-		background-color: black;
-		clear: both;
-	}
-	</style>
 </head>
 
 <body>
@@ -111,12 +53,16 @@
 			<s:form action="BuyItemAction">
 			<table>
 				<tr>
+					<td><span>id</span></td>
+					<td><span><s:property value="session.id" /></span></td>
+				</tr>
+				<tr>
 					<td><span>商品名</span></td>
-					<td><s:property value="session.buyItem_name"/></td>
+					<td><s:property value="session.item_name"/></td>
 				</tr>
 				<tr>
 					<td><span>値段</span></td>
-					<td><s:property value="session.buyItem_price"/><span>円</span></td>
+					<td><s:property value="session.item_price"/><span>円</span></td>
 				</tr>
 				<tr>
 					<td><span>購入個数</span></td>

@@ -53,6 +53,7 @@ create table cart_info(
 );
 
 
-INSERT INTO item_info_transaction(item_name,item_price,item_stock) VALUES("ノートBook",100,50);
+INSERT INTO item_info_transaction(item_name,item_price,item_stock) VALUES("ノートBook",100,50),
+("机",10000,30),("椅子",7000,50),("マフラー",10000,10),("眼鏡",30000,5);
 
 INSERT INTO login_user_transaction(id,login_id,login_pass,user_name,admin_flg) VALUES(1,"admin","admin","admin","1");

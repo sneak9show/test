@@ -36,6 +36,14 @@
 				</li>
 
 				<li>
+					<s:if test="#session.id != null">
+						<s:form action="MyPageAction">
+							<s:submit value="マイページ"/>
+						</s:form>
+					</s:if>
+				</li>
+
+				<li>
 					<s:form action="UserCreateAction">
 						<s:submit value="新規登録" />
 					</s:form>
