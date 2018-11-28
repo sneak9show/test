@@ -13,6 +13,9 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 	private String userName;
 	public Map<String ,Object> session;
 	private String errorMassage;
+	private String errorMassage_id;
+	private String errorMassage_pass;
+	private String errorMassage_name;
 
 	public String execute(){
 		String result =SUCCESS;
@@ -23,12 +26,19 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 			session.put("loginUserId", loginUserId);
 			session.put("loginPassword", loginPassword);
 			session.put("userName",userName);
-		}else{
-			setErrorMassage("未入力の箇所があります。");
+
+		}else if((loginUserId.equals(""))){
+			setErrorMassage_id("ログインIDが未入力です。");
+
+			result =ERROR;
+		}if((loginPassword.equals(""))){
+			setErrorMassage_pass("ログインPASSが未入力です。");
+			result =ERROR;
+		}if((userName.equals(""))){
+			setErrorMassage_name("ユーザー名が未入力です。");
 			result =ERROR;
 		}
 		return result;
-
 	}
 
 	public String getLoginUserId() {
@@ -70,5 +80,28 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 	public void setErrorMassage(String errorMassage) {
 		this.errorMassage = errorMassage;
 	}
+
+	public String getErrorMassage_id() {
+		return errorMassage_id;
+	}
+	public void setErrorMassage_id(String errorMassage_id) {
+		this.errorMassage_id = errorMassage_id;
+	}
+
+	public String getErrorMassage_pass(){
+		return errorMassage_pass;
+	}
+	public void setErrorMassage_pass(String errorMassage_pass){
+		this.errorMassage_pass = errorMassage_pass;
+	}
+
+	public String getErrorMassage_name(){
+		return errorMassage_name;
+	}
+	public void setErrorMassage_name(String errorMassage_name){
+		this.errorMassage_name = errorMassage_name;
+	}
+
+
 
 }

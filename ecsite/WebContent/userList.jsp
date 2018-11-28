@@ -86,9 +86,11 @@
 					<th>名前</th>
 					<th>admin_flg</th>
 					<th>登録日</th>
+					<th>削除ボタン</th>
 				</tr>
 
 				<s:iterator value="userList">
+				<s:form action="UserSelectDeleteAction">
 					<tr>
 						<td><s:property value="id"/></td>
 						<td><s:property value="loginId" /></td>
@@ -96,7 +98,12 @@
 						<td><s:property value="userName" /></td>
 						<td><s:property value="admin_flg" /></td>
 						<td><s:property value="insert_date" /></td>
+						<td>
+<%-- 							<s:submit value="選択削除" /> --%>
+							<button>aaaaaaa</button>
+						</td>
 					</tr>
+				</s:form>
 				</s:iterator>
 				</table>
 

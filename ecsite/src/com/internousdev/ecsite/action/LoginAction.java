@@ -27,6 +27,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 	public String execute()throws SQLException{
 		result =ERROR;
+
 		loginDTO= loginDAO.getLoginUserInfo(loginUserId,loginPassword);
 		session.put("loginUser", loginDTO);
 

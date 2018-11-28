@@ -58,6 +58,8 @@
 			<h2>Home</h2>
 		</div>
 
+		<div ></div>
+
 		<div id="text-center">
 			<s:form action="HomeAction">
 				<s:submit value="商品購入" />

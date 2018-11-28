@@ -34,6 +34,8 @@ public class UserListDeleteCompleteAction extends ActionSupport implements Sessi
 	}
 
 
+
+
 		public Map<String, Object> getSession() {
 			return session;
 		}
