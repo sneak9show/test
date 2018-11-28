@@ -16,8 +16,8 @@
 
 	<script type="text/javascript">
 		function submitAction(url){
-			$('form').attr('action',url);
-			$('form').submit();
+			$('form.buy').attr('action',url);
+			$('form.buy').submit();
 		}
 	</script>
 
@@ -54,7 +54,7 @@
 			<h2>BuyItem</h2>
 		</div>
 		<div>
-			<s:form>
+			<s:form class="buy">
 			<tr>
 				<td>商品名</td>
 				<td><s:property value="session.item_name"/></td>

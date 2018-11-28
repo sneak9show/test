@@ -10,26 +10,27 @@ import com.internousdev.ecsite.dao.UserListDeleteCompleteDAO;
 import com.internousdev.ecsite.dto.UserInfoDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class UserSelectDeleteCompleteAction extends ActionSupport implements SessionAware{
+public class UserSelectDeleteAction extends ActionSupport implements SessionAware{
 
 	public Map<String ,Object> session;
 	private ArrayList<UserInfoDTO> userList=new ArrayList<UserInfoDTO>();
 	private String message;
 	private String result;
+	private int id;
 
 	public String execute() throws SQLException{
-
+		System.out.println(id);
 		UserListDeleteCompleteDAO userListDeleteCompleteDAO=new UserListDeleteCompleteDAO();
-		int count=userListDeleteCompleteDAO.userSelectDelete(id);
+//		int count=userListDeleteCompleteDAO.userSelectDelete(id);
+//
+//		session.put("id", UserInfoDTO.getId());
+//		session.put("user_name", UserInfoDTO.getUserName());
 
-		session.put("id", UserInfoDTO.getId());
-		session.put("user_name", UserInfoDTO.getUserName());
-
-		if(count > 0){
-			setMessage("ユーザー情報を正しく削除しました。");
-		}else if(count == 0){
-			setMessage("ユーザー情報の削除に失敗しました。");
-		}
+//		if(count > 0){
+//			setMessage("ユーザー情報を正しく削除しました。");
+//		}else if(count == 0){
+//			setMessage("ユーザー情報の削除に失敗しました。");
+//		}
 		result=SUCCESS;
 		return result;
 	}
@@ -64,6 +65,14 @@ public class UserSelectDeleteCompleteAction extends ActionSupport implements Ses
 
 	public void setResult(String result) {
 		this.result = result;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 
