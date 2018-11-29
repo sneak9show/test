@@ -12,44 +12,56 @@
 <link rel="stylesheet" href="./css/style.css">
 <title>Home画面</title>
 
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+      $('.slider').bxSlider({
+      auto:true,
+      mode:'horizontal',
+      speed:500
+
+
+      });
+    });
+  </script>
 
 </head>
 <body>
 	<div id="header">
-		<div id="logo-img"><a href='<s:url action="GoHomeAction"/>'><img src="./img/konozama.png"></a>
+		<div id="logo-img">
+			<a href='<s:url action="GoHomeAction"/>'><img
+				src="./img/konozama.png"></a>
 
 			<ul>
-				<li>
-				<s:if test="#session.id == null">
-					<s:form action="LoginAction">
-						<s:submit value="ログイン" />
-					</s:form>
-				</s:if>
-				</li>
+				<li><s:if test="#session.id == null">
+						<s:form action="LoginAction">
+							<s:submit value="ログイン" />
+						</s:form>
+					</s:if></li>
 
-				<li>
-					<s:if test="#session.id != null">
+				<li><s:if test="#session.id != null">
 						<s:form action="LogoutAction">
-							<s:submit value="ログアウト"/>
+							<s:submit value="ログアウト" />
 						</s:form>
-					</s:if>
-				</li>
+					</s:if></li>
 
-				<li>
-					<s:if test="#session.id != null">
+				<li><s:if test="#session.id != null">
 						<s:form action="MyPageAction">
-							<s:submit value="マイページ"/>
+							<s:submit value="マイページ" />
 						</s:form>
-					</s:if>
-				</li>
+					</s:if></li>
 
-				<li>
-					<s:form action="UserCreateAction">
+				<li><s:form action="UserCreateAction">
 						<s:submit value="新規登録" />
-					</s:form>
-				</li>
+					</s:form></li>
 			</ul>
-			</div>
+		</div>
 		<div id="pr"></div>
 	</div>
 
@@ -58,24 +70,37 @@
 			<h2>Home</h2>
 		</div>
 
-		<div ></div>
+		<div class="slider">
+			<div>
+				<img src="./img/bookstore.jpg">
+			</div>
+			<div>
+				<img src="./img/jQuery_image1.jpg">
+			</div>
+			<div>
+				<img src="./img/jQuery_image2.jpg">
+			</div>
+		</div>
 
 		<div id="text-center">
-			<s:form action="HomeAction">
-				<s:submit value="商品購入" />
-			</s:form>
-
-			<s:if test="#session.admin_flg  != null ">
-				<s:form action="AdminAction">
-					<s:submit value="管理者" />
+			<div id="button">
+				<s:form action="HomeAction">
+					<s:submit value="商品購入" />
 				</s:form>
-			</s:if>
+			</div>
+
+			<div id="button">
+				<s:if test="#session.admin_flg  != null ">
+					<s:form action="AdminAction">
+						<s:submit value="管理者" />
+					</s:form>
+				</s:if>
+			</div>
 
 
 			<s:if test="#session.id != null">
 				<p>
-					ログアウトする場合は
-					<a href='<s:url action="LogoutAction"/>'>こちら</a>
+					ログアウトする場合は <a href='<s:url action="LogoutAction"/>'>こちら</a>
 				</p>
 			</s:if>
 
@@ -89,9 +114,7 @@
 	</div>
 
 	<div id="footer">
-		<div id="text-center">
-
-		</div>
+		<div id="text-center"></div>
 		<div id="pr"></div>
 	</div>
 

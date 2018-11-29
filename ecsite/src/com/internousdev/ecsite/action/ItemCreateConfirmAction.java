@@ -12,22 +12,29 @@ public class ItemCreateConfirmAction extends ActionSupport implements SessionAwa
 	private String itemPrice;
 	private String itemStock;
 	public Map<String ,Object> session;
-	private String errorMessage;
+	private String errorMessage_itemName;
+	private String errorMessage_price;
+	private String errorMessage_stock;
 
 	public String execute(){
-
 		String result=SUCCESS;
 
 		if(!(itemName.equals(""))
 				&& !(itemPrice.equals(""))
 				&& !(itemStock.equals(""))){
-
 			session.put("itemName", itemName);
 			session.put("itemPrice", itemPrice);
 			session.put("itemStock", itemStock);
-		}else{
-			setErrorMessage("未入力の項目があります。");
-			result=ERROR;
+		}else if((itemName.equals(""))){
+			setErrorMessage_itemName("商品名が未入力です。");
+
+			result =ERROR;
+		}if((itemPrice.equals(""))){
+			setErrorMessage_price("値段が未入力です。");
+			result =ERROR;
+		}if((itemStock.equals(""))){
+			setErrorMessage_stock("在庫数が未入力です。");
+			result =ERROR;
 		}
 		return result;
 	}
@@ -64,12 +71,28 @@ public class ItemCreateConfirmAction extends ActionSupport implements SessionAwa
 		this.session = session;
 	}
 
-	public String getErrorMessage() {
-		return errorMessage;
+	public String getErrorMessage_itemName() {
+		return errorMessage_itemName;
 	}
 
-	public void setErrorMessage(String errorMessage) {
-		this.errorMessage = errorMessage;
+	public void setErrorMessage_itemName(String errorMessage_itemName) {
+		this.errorMessage_itemName = errorMessage_itemName;
+	}
+
+	public String getErrorMessage_price() {
+		return errorMessage_price;
+	}
+
+	public void setErrorMessage_price(String errorMessage_price) {
+		this.errorMessage_price = errorMessage_price;
+	}
+
+	public String getErrorMessage_stock() {
+		return errorMessage_stock;
+	}
+
+	public void setErrorMessage_stock(String errorMessage_stock) {
+		this.errorMessage_stock = errorMessage_stock;
 	}
 
 }

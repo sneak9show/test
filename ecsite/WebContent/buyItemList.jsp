@@ -13,6 +13,19 @@
 <link rel="stylesheet" href="./css/style.css">
 <title>BuyItem画面</title>
 
+<script type="text/javascript">
+	function sub(id) {
+		alert("id" + id);
+		$("input.id").val(id);
+		alert($("input.id"));
+		$(button).submit();
+	}
+	function goUserInfoEditAction(element){
+		 var id_value = element.id;
+		 var id = document.getElementById('selectedId0').value=id_value;
+		 document.getElementById('form-user-info-list').action="UserInfoEditAction";
+		}
+</script>
 
 </head>
 
@@ -50,27 +63,31 @@
 		<div>
 
 			<h3>商品情報は以下になります。</h3>
-			<table >
-				<tr>
-					<th>商品ID</th>
-					<th>商品名</th>
-					<th>値段</th>
-				</tr>
-
-				<s:iterator value="list">
-				<s:form action="BuyItemListAction">
-					<s:hidden name="id" />
+			<s:form action="BuyItemListAction">
+				<table border=1>
 					<tr>
-						<td><s:property value="id" /></td>
-						<td><s:property value="itemName" /></td>
-						<td><s:property value="itemPrice" /><span>円</span></td>
-						<td>
-							<s:submit value="購入画面へ" />
-						</td>
+						<th>商品ID</th>
+						<th>商品名</th>
+						<th>値段</th>
+						<th>購入ボタン</th>
 					</tr>
-				</s:form>
-				</s:iterator>
-			</table>
+
+					<s:iterator value="list">
+
+
+						<tr>
+							<td><s:property value="id" /><s:hidden name="id" value="%{id}"/><s:hidden name="selectedId" id="selectedId%{#st.index}" value=""/></td>
+							<td><s:property value="itemName" /></td>
+							<td><s:property value="itemPrice" /><span>円</span></td>
+<%-- 							<td><s:submit value="購入画面へ" /></td> --%>
+<%-- 							<td><button  onclick='sub(<s:property value="id"/>)'>購入</button></td> --%>
+							<td><button id="%{#st.index}" value="削除" class="btn" onclick='sub(<s:property value="id"/>)'>購入</button></td>
+						</tr>
+
+					</s:iterator>
+				</table>
+
+			</s:form>
 
 			<div>
 				<p>

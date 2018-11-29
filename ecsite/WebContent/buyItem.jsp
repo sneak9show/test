@@ -54,7 +54,7 @@
 			<table>
 				<tr>
 					<td><span>id</span></td>
-					<td><span><s:property value="session.id" /></span></td>
+					<td><span><s:property value="id" /></span></td>
 				</tr>
 				<tr>
 					<td><span>商品名</span></td>

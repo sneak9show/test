@@ -12,10 +12,9 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 	private String loginPassword;
 	private String userName;
 	public Map<String ,Object> session;
-	private String errorMassage;
-	private String errorMassage_id;
-	private String errorMassage_pass;
-	private String errorMassage_name;
+	private String errorMessage_id;
+	private String errorMessage_pass;
+	private String errorMessage_name;
 
 	public String execute(){
 		String result =SUCCESS;
@@ -28,14 +27,13 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 			session.put("userName",userName);
 
 		}else if((loginUserId.equals(""))){
-			setErrorMassage_id("ログインIDが未入力です。");
-
+			setErrorMessage_id("ログインIDが未入力です。");
 			result =ERROR;
 		}if((loginPassword.equals(""))){
-			setErrorMassage_pass("ログインPASSが未入力です。");
+			setErrorMessage_pass("ログインPASSが未入力です。");
 			result =ERROR;
 		}if((userName.equals(""))){
-			setErrorMassage_name("ユーザー名が未入力です。");
+			setErrorMessage_name("ユーザー名が未入力です。");
 			result =ERROR;
 		}
 		return result;
@@ -73,33 +71,25 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 		this.session = session;
 	}
 
-	public String getErrorMassage() {
-		return errorMassage;
+	public String getErrorMessage_id() {
+		return errorMessage_id;
+	}
+	public void setErrorMessage_id(String errorMessage_id) {
+		this.errorMessage_id = errorMessage_id;
 	}
 
-	public void setErrorMassage(String errorMassage) {
-		this.errorMassage = errorMassage;
+	public String getErrorMessage_pass(){
+		return errorMessage_pass;
+	}
+	public void setErrorMessage_pass(String errorMessage_pass){
+		this.errorMessage_pass = errorMessage_pass;
 	}
 
-	public String getErrorMassage_id() {
-		return errorMassage_id;
+	public String getErrorMessage_name(){
+		return errorMessage_name;
 	}
-	public void setErrorMassage_id(String errorMassage_id) {
-		this.errorMassage_id = errorMassage_id;
-	}
-
-	public String getErrorMassage_pass(){
-		return errorMassage_pass;
-	}
-	public void setErrorMassage_pass(String errorMassage_pass){
-		this.errorMassage_pass = errorMassage_pass;
-	}
-
-	public String getErrorMassage_name(){
-		return errorMassage_name;
-	}
-	public void setErrorMassage_name(String errorMassage_name){
-		this.errorMassage_name = errorMassage_name;
+	public void setErrorMessage_name(String errorMessage_name){
+		this.errorMessage_name = errorMessage_name;
 	}
 
 

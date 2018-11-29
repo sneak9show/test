@@ -9,7 +9,6 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-
 <link rel="stylesheet" href="./css/style.css">
 <title>ItemCreate画面</title>
 
@@ -47,25 +46,38 @@
 		</div>
 
 		<div>
-			<s:if test="erroeMassage != ''">
-				<s:property value="errorMassage" escape="false" />
-			</s:if>
+
 
 			<table>
 				<s:form action="ItemCreateConfirmAction">
 					<tr>
 						<td><label>商品名:</label></td>
-						<td><input type="text" name="itemName" value="" /></td>
+						<td><input type="text" name="itemName" value="<s:property value='itemName'/>" /></td>
+						<td>
+							<s:if test="erroeMessage_itemName != ''">
+								<s:property value="errorMessage_itemName" escape="false" />
+							</s:if>
+						</td>
 					</tr>
 
 					<tr>
 						<td><label>商品価格:</label></td>
-						<td><input type="text" name="itemPrice" value="" /></td>
+						<td><input type="text" name="itemPrice" value="<s:property value='itemPrice'/>" /></td>
+						<td>
+							<s:if test="erroeMessage_price != ''">
+								<s:property value="errorMessage_price" escape="false" />
+							</s:if>
+						</td>
 					</tr>
 
 					<tr>
 						<td><label>在庫数:</label></td>
-						<td><input type="text" name="itemStock" value="" /></td>
+						<td><input type="text" name="itemStock" value="<s:property value='itemStock'/>" /></td>
+						<td>
+							<s:if test="erroeMessage_stock != ''">
+								<s:property value="errorMessage_stock" escape="false" />
+							</s:if>
+						</td>
 					</tr>
 
 					<s:submit value="登録" />

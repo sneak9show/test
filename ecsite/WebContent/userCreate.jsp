@@ -57,8 +57,8 @@
 						<td><label>ログインID:</label></td>
 						<td><input type="text" name="loginUserId" value="<s:property value='loginUserId' />" /></td>
 						<td>
-							<s:if test="erroeMassage_id != ''">
-								<s:property value="errorMassage_id" escape="false" />
+							<s:if test="errorMessage_id != ''">
+								<s:property value="errorMessage_id" escape="false" />
 							</s:if>
 						</td>
 					</tr>
@@ -67,8 +67,8 @@
 						<td><label>ログインPASS:</label></td>
 						<td><input type="text" name="loginPassword" value="<s:property value='loginPassword' />" /></td>
 						<td>
-							<s:if test="erroeMassage_pass != ''">
-								<s:property value="errorMassage_pass" escape="false" />
+							<s:if test="erroeMessage_pass != ''">
+								<s:property value="errorMessage_pass" escape="false" />
 							</s:if>
 						</td>
 					</tr>
@@ -77,8 +77,8 @@
 						<td><label>ユーザー名:</label></td>
 						<td><input type="text" name="userName" value="<s:property value='userName' />" /></td>
 						<td>
-							<s:if test="erroeMassage_name != ''">
-								<s:property value="errorMassage_name" escape="false" />
+							<s:if test="erroeMessage_name != ''">
+								<s:property value="errorMessage_name" escape="false" />
 							</s:if>
 						</td>
 					</tr>
