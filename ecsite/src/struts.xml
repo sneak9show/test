@@ -159,6 +159,8 @@
 			<result name="success">userListDeleteComplete.jsp</result>
 		</action>
 
+		<!--  -->
+
 	</package>
 
 </struts>

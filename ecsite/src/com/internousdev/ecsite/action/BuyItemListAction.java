@@ -18,7 +18,6 @@ public class BuyItemListAction extends ActionSupport implements SessionAware{
 
 	public String execute() throws SQLException{
 		buyItemDTO= buyItemDAO.getBuyItem(id);
-
 		session.put("id", buyItemDTO.getId());
 		session.put("item_name", buyItemDTO.getItemName());
 		session.put("item_price", buyItemDTO.getItemPrice());
@@ -59,7 +58,6 @@ public class BuyItemListAction extends ActionSupport implements SessionAware{
 	public void setBuyItemDAO(BuyItemDAO buyItemDAO) {
 		this.buyItemDAO = buyItemDAO;
 	}
-
 
 }
 

@@ -22,4 +22,5 @@ public class UserListDeleteConfirmAction extends ActionSupport implements Sessio
 	}
 
 
+
 }

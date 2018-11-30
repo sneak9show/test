@@ -14,73 +14,45 @@
 
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-<script
+<script type="text/javascript"
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
 <script>
-    $(document).ready(function(){
-      $('.slider').bxSlider({
-      auto:true,
-      mode:'horizontal',
-      speed:500
+	$(document).ready(function() {
+		$('.slider').bxSlider({
+			auto : true,
+			mode : 'horizontal',
+			speed : 500,
+			slideWidth : 500,
 
-
-      });
-    });
-  </script>
+		});
+	});
+</script>
 
 </head>
 <body>
-	<div id="header">
-		<div id="logo-img">
-			<a href='<s:url action="GoHomeAction"/>'><img
-				src="./img/konozama.png"></a>
-
-			<ul>
-				<li><s:if test="#session.id == null">
-						<s:form action="LoginAction">
-							<s:submit value="ログイン" />
-						</s:form>
-					</s:if></li>
-
-				<li><s:if test="#session.id != null">
-						<s:form action="LogoutAction">
-							<s:submit value="ログアウト" />
-						</s:form>
-					</s:if></li>
-
-				<li><s:if test="#session.id != null">
-						<s:form action="MyPageAction">
-							<s:submit value="マイページ" />
-						</s:form>
-					</s:if></li>
-
-				<li><s:form action="UserCreateAction">
-						<s:submit value="新規登録" />
-					</s:form></li>
-			</ul>
-		</div>
-		<div id="pr"></div>
-	</div>
-
+	<jsp:include page="header.jsp"></jsp:include>
 	<div id="main">
 		<div id="top">
 			<h2>Home</h2>
 		</div>
-
-		<div class="slider">
-			<div>
-				<img src="./img/bookstore.jpg">
-			</div>
-			<div>
-				<img src="./img/jQuery_image1.jpg">
-			</div>
-			<div>
-				<img src="./img/jQuery_image2.jpg">
+		<div class="sliderArea">
+			<div class="slider">
+				<div>
+					<img src="./img/bookstore.jpg">
+				</div>
+				<div>
+					<img src="./img/jQuery_image5.jpg">
+				</div>
+				<div>
+					<a href='<s:url action="HomeAction"/>'> <img
+						src="./img/vewospr000437.jpg"></a>
+				</div>
 			</div>
 		</div>
+
 
 		<div id="text-center">
 			<div id="button">
@@ -117,6 +89,7 @@
 		<div id="text-center"></div>
 		<div id="pr"></div>
 	</div>
+
 
 </body>
 </html>

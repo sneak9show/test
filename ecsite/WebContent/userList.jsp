@@ -11,6 +11,8 @@
 <meta name="keywords" content="" />
 <title>UserList画面</title>
 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
 <style type="text/css">
 /* TAG LAYOUT */
 body {
@@ -63,10 +65,10 @@ table {
 
 <script type="text/javascript">
 	function sub(id) {
-		$("input.id").val(id);
-		alert($("input.id"));
-		$(button).submit();
+		$("input.selectedId").val(id);
+		$("form.action").submit();
 	}
+
 </script>
 
 </head>
@@ -113,13 +115,14 @@ table {
 									<%-- 							<s:submit value="選択削除" /> --%>
 <%-- 									<s:hidden name="" /> --%>
 									<button onclick='sub(<s:property value="id"/>)'>削除</button>
+									<%-- ↑未実装↑ --%>
 								</td>
 							</tr>
 
 						</s:iterator>
 
 					</table>
-					<s:hidden name="id" class="id" />
+					<s:hidden name="id" class="selectedId" />
 				</s:form>
 
 

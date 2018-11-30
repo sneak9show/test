@@ -14,31 +14,8 @@
 
 </head>
 <body>
-	<div id="header">
-		<div id="logo-img">
-			<a href='<s:url action="GoHomeAction"/>'><img
-				src="./img/konozama.png"></a>
 
-			<ul>
-				<li><s:if test="#session.id == null">
-						<s:form action="LoginAction">
-							<s:submit value="ログイン" />
-						</s:form>
-					</s:if></li>
-
-				<li><s:if test="#session.id != null">
-						<s:form action="LogoutAction">
-							<s:submit value="ログアウト" />
-						</s:form>
-					</s:if></li>
-
-				<li><s:form action="UserCreateAction">
-						<s:submit value="新規登録" />
-					</s:form></li>
-			</ul>
-		</div>
-		<div id="pr"></div>
-	</div>
+	<jsp:include page="header.jsp"></jsp:include>
 
 	<div id="main">
 		<div id="top">
