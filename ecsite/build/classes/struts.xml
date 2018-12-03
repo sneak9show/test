@@ -152,12 +152,13 @@
 			<result name="success">userListDeleteComplete.jsp</result>
 		</action>
 
-		<!-- UserListDeleteCompleteAction -->
-		<action name="UserSelectDeleteAction"
-			class="com.internousdev.ecsite.action.UserSelectDeleteAction"
-			method="execute">
-			<result name="success">userListDeleteComplete.jsp</result>
-		</action>
+ 		<!-- UserListDeleteCompleteAction -->
+<!-- 		<action name="UserSelectDeleteAction" -->
+<!-- 			class="com.internousdev.ecsite.action.UserSelectDeleteAction" -->
+<!-- 			method="execute"> -->
+<!-- 			<result name="success">userListDeleteComplete.jsp</result> -->
+<!-- 		</action> -->
+<!-- ↑未実装 -->
 
 		<!--  -->
 
