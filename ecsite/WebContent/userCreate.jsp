@@ -15,7 +15,7 @@
 
 </head>
 <body>
-		<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="header.jsp"></jsp:include>
 
 	<div id="main">
 		<div id="top">
