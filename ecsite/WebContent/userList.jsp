@@ -88,7 +88,6 @@ table {
 
 			<s:elseif test="message == null">
 				<h3>登録されているユーザーは以下になります。</h3>
-				<s:form action="UserSelectDeleteAction">
 					<table border="1">
 
 						<tr>
@@ -98,7 +97,6 @@ table {
 							<th>名前</th>
 							<th>admin_flg</th>
 							<th>登録日</th>
-							<th>削除ボタン</th>
 						</tr>
 
 						<s:iterator value="userList">
@@ -111,21 +109,11 @@ table {
 								<td><s:property value="userName" /></td>
 								<td><s:property value="admin_flg" /></td>
 								<td><s:property value="insert_date" /></td>
-								<td>
-									<%-- 							<s:submit value="選択削除" /> --%>
-<%-- 									<s:hidden name="" /> --%>
-									<button onclick='sub(<s:property value="id"/>)'>削除</button>
-									<%-- ↑未実装↑ --%>
-								</td>
 							</tr>
 
 						</s:iterator>
 
 					</table>
-					<s:hidden name="id" class="selectedId" />
-				</s:form>
-
-
 
 				<s:form action="UserListDeleteConfirmAction">
 					<input type="hidden" name="deleteFlg" value="1">
